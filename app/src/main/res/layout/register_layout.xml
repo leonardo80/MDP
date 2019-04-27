@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:textSize="18sp"
+        android:layout_below="@id/txt_name"/>
+
+    <TextView
+        android:id="@+id/txt_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password: "
+        android:textSize="18sp"
+        android:layout_below="@id/txt_gender"/>
+
+    <TextView
+        android:id="@+id/txt_conpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password: "
+        android:textSize="18sp"
+        android:layout_below="@id/txt_pass"/>
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="e-Mail: "
+        android:textSize="18sp"
+        android:layout_below="@id/txt_phone"/>
+
+    <TextView
+        android:id="@+id/txt_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender: "
+        android:textSize="18sp"
+        android:layout_below="@id/txt_age"/>
+
+    <TextView
+        android:id="@+id/txt_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age: "
+        android:textSize="18sp"
+        android:layout_below="@id/txt_email"/>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:text="Name: " />
+
+    <TextView
+        android:id="@+id/txt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Phone number: "
+        android:layout_below="@id/txt_user"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_name"
+        android:layout_alignLeft="@id/et_conpass"
+        android:layout_toRightOf="@id/txt_name"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_name"
+        android:layout_alignBaseline="@id/txt_user"
+        android:layout_alignLeft="@id/et_conpass"
+        android:layout_toRightOf="@id/txt_user"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_user"
+        android:layout_alignBaseline="@id/txt_phone"
+        android:layout_alignLeft="@id/et_conpass"
+        android:layout_toRightOf="@id/txt_phone"
+        android:ems="10"
+        android:hint="Phone number"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_alignBaseline="@id/txt_email"
+        android:layout_alignLeft="@id/et_conpass"
+        android:layout_toRightOf="@id/txt_email"
+        android:ems="10"
+        android:hint="e-Mail"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_email"
+        android:layout_alignBaseline="@id/txt_age"
+        android:layout_alignLeft="@id/et_conpass"
+        android:layout_toRightOf="@id/txt_age"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cmb_gender"
+        android:layout_alignBaseline="@id/txt_pass"
+        android:layout_alignLeft="@id/et_conpass"
+        android:layout_toRightOf="@id/txt_pass"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/et_conpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_pass"
+        android:layout_alignBaseline="@id/txt_conpass"
+        android:layout_toRightOf="@id/txt_conpass"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"/>
+
+    <Spinner
+        android:id="@+id/cmb_gender"
+        android:layout_toRightOf="@id/txt_gender"
+        android:layout_alignBaseline="@id/txt_gender"
+        android:layout_alignLeft="@id/et_conpass"
+        android:layout_below="@id/et_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:entries="@array/gender"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_below="@id/txt_conpass"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_below="@id/txt_conpass"
+        android:layout_toRightOf="@id/btn_register"/>
+
+</RelativeLayout>
